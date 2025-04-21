@@ -1,0 +1,24 @@
+# config.yaml
+detectors:
+  - name: HogTokenDetector
+    keywords:
+      - swagger
+    regex:
+      token: '(swagger-ui.html)'
+    verify:
+      - endpoint: http://localhost:8000/
+        # 'unsafe' must be set to true if the endpoint uses HTTP
+        unsafe: true
+        headers:
+          - "Authorization: super secret authorization header"
+  - name: dwasfg
+    keywords:
+      - 664b
+    regex:
+      token: '(664b4407efaa5cfd9a79a8ae)'
+    verify:
+      - endpoint: http://localhost:8000/
+        # 'unsafe' must be set to true if the endpoint uses HTTP
+        unsafe: true
+        headers:
+          - "Authorization: super secret authorization header"
